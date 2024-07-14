@@ -1,0 +1,53 @@
+.button {
+    -fx-font-size: 14px;
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #000000;
+    -fx-background-image: url('/Pics/BackGrounds/ButtonOnHoverStroke.png');
+    -fx-border-image-slice: 30;
+    -fx-border-image-width: 10;
+    -fx-border-image-repeat: stretch;
+}
+
+#exitButton:hover {
+    -fx-background-color: #000000;
+    -fx-background-image: url('/Pics/BackGrounds/HalfSizeButtonHover.png');
+    -fx-border-image-slice: 30;
+    -fx-border-image-width: 10;
+    -fx-border-image-repeat: stretch;
+}
+
+#logoutButton:hover {
+    -fx-background-color: #000000;
+    -fx-background-image: url('/Pics/BackGrounds/HalfSizeButtonHover.png');
+    -fx-border-image-slice: 30;
+    -fx-border-image-width: 10;
+    -fx-border-image-repeat: stretch;
+}
+
+.alert-box {
+    -fx-background-color: rgba(0, 0, 0, 0.8);
+    -fx-border-color: #666666;
+    -fx-border-width: 2px;
+    -fx-padding: 20;
+    -fx-spacing: 10;
+    -fx-alignment: center;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.alert-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.alert-message {
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffffff;
+}

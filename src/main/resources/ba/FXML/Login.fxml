@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="pane" prefHeight="1080.0" prefWidth="1920.0" styleClass="login-menu"
+      stylesheets="@../StyleSheets/Menus.css" xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller.LoginViewController">
+    <AnchorPane>
+        <ImageView fitHeight="1080" fitWidth="1920" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Pics/BackGrounds/loginMenu.jpg"/>
+            </image>
+        </ImageView>
+        <VBox alignment="CENTER" layoutX="800.0" layoutY="400.0" spacing="10">
+            <TextField fx:id="usernameField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0"
+                       prefWidth="320.0" promptText="Username"/>
+            <PasswordField fx:id="passwordField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0"
+                           prefWidth="320.0" promptText="Password"/>
+            <Button fx:id="loginButton" onMouseClicked="#loginAction" prefHeight="42.0" prefWidth="154.0" text="Login"/>
+            <Button fx:id="forgotPassword" onMouseClicked="#questionAction" prefHeight="42.0" prefWidth="154.0"
+                    text="Forgot Password"/>
+            <Button fx:id="registerButton" onMouseClicked="#registerAction" styleClass="register-button"
+                    text="Don't have an account?"/>
+        </VBox>
+        <AnchorPane layoutX="806.0" layoutY="684.0" prefHeight="111.0" prefWidth="320.0">
+            <children>
+                <Button fx:id="next" visible="false" layoutX="4.0" layoutY="85.0" mnemonicParsing="false"
+                        onAction="#next" text="next"/>
+                <Label visible="false" fx:id="question" layoutX="4.0" layoutY="5.0" prefHeight="28.0" prefWidth="312.0"
+                       text="question" textFill="#ea1010">
+                    <font>
+                        <Font size="24.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="answer" visible="false" layoutX="2.0" layoutY="43.0" prefHeight="35.0"
+                           prefWidth="320.0" promptText="Answer"/>
+                <TextField fx:id="number" visible="false" layoutX="75.0" layoutY="85.0" prefHeight="42.0"
+                           prefWidth="128.0" promptText="number"/>
+                <Button visible="false" layoutX="203.0" layoutY="85.0" fx:id="show" mnemonicParsing="false" prefHeight="42.0"
+                        prefWidth="118.0" onAction="#showQ" text="show question"/>
+
+            </children>
+        </AnchorPane>
+    </AnchorPane>
+</Pane>

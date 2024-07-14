@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pane" prefHeight="1080.0" prefWidth="1920.0" styleClass="login-menu" stylesheets="@../StyleSheets/Menus.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller.CinemaViewController">
+    <ImageView fitHeight="1000" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+        <Image fx:id="mainScene" url="@../Pics/BackGrounds/board.jpg" />
+    </ImageView>
+    <Button layoutX="113.0" layoutY="947.0" mnemonicParsing="false" onAction="#back" prefHeight="53.0" prefWidth="163.0" text="back" />
+
+</Pane>

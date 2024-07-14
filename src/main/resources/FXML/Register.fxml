@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="pane" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../StyleSheets/Menus.css"
+      xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="view.Controller.RegisterViewController">
+    <AnchorPane prefHeight="1080.0" prefWidth="1920.0">
+        <ImageView fitHeight="1080" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Pics/BackGrounds/registerMenu.png"/>
+            </image>
+        </ImageView>
+        <AnchorPane layoutX="1175.0" layoutY="468.0" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <AnchorPane layoutX="-1.0" prefHeight="208.0" prefWidth="305.0">
+                    <children>
+                        <Button fx:id="doneB" layoutX="25.0" layoutY="163.0" mnemonicParsing="false" onAction="#done"
+                                text="doneB" visible="false"/>
+                        <Button fx:id="nextB" layoutX="215.0" layoutY="163.0" mnemonicParsing="false" onAction="#next"
+                                text="next" visible="false"/>
+                        <TextField fx:id="secQ" layoutX="25.0" layoutY="14.0" prefHeight="42.0" prefWidth="259.0"
+                                   promptText="security question" visible="false"/>
+                        <TextField fx:id="secA" layoutX="25.0" layoutY="68.0" prefHeight="42.0" prefWidth="259.0"
+                                   promptText="answer" visible="false"/>
+                        <TextField fx:id="confirmAnswer" layoutX="25.0" layoutY="110.0" prefHeight="42.0"
+                                   prefWidth="259.0" promptText="confirm answer" visible="false"/>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </AnchorPane>
+    <VBox alignment="CENTER" layoutX="788.0" layoutY="400.0" prefHeight="344.0" prefWidth="347.0" spacing="10">
+        <Label fx:id="createAccount" alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="320.0"
+               text="Create an Account!" textFill="#e1d5d5">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="usernameField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0" prefWidth="320.0"
+                   promptText="Username"/>
+        <PasswordField fx:id="passwordField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0"
+                       prefWidth="320.0" promptText="Password"/>
+        <PasswordField fx:id="passwordRepeatField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0"
+                       prefWidth="320.0" promptText="Repeat Password"/>
+        <TextField fx:id="nickNameField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0" prefWidth="320.0"
+                   promptText="Nickname"/>
+        <TextField fx:id="emailField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0" prefWidth="320.0"
+                   promptText="Email"/>
+        <HBox>
+            <Button fx:id="registerButton" onMouseClicked="#registerAction" prefHeight="42.0" prefWidth="167.0"
+                    text="Register"/>
+
+            <Button fx:id="generatePassword" onMouseClicked="#generatePasswordAction" prefHeight="42.0"
+                    prefWidth="185.0" text="generate password"/>
+            <Button fx:id="registerCheat" onMouseClicked="#registerCheatAction" prefHeight="42.0" prefWidth="167.0"
+                    text="Admin"/>
+        </HBox>
+        <Button onMouseClicked="#back" text="back"/>
+    </VBox>
+</Pane>

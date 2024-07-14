@@ -1,0 +1,22 @@
+.root, .alert, .alert > .dialog-pane {
+    -fx-background-color: #2c2b2b; /* Dark background color */
+    -fx-text-fill: #ffffff; /* White text color */
+}
+
+.alert > .dialog-pane {
+    -fx-background-color: #2c2b2b; /* Dark background color for dialog pane */
+}
+
+.alert .button {
+    -fx-text-fill: #ffffff; /* White text color for buttons */
+    -fx-background-color: #7f030c; /* Dark red background color for buttons */
+}
+
+.alert .button:default {
+    -fx-background-color: #b13811; /* Lighter red color for default button */
+}
+
+.alert > .dialog-pane .label {
+    -fx-font-style: italic;
+    -fx-text-fill: #ffffff; /* Italic text style for labels */
+}

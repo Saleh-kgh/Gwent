@@ -1,0 +1,16 @@
+package Enum;
+
+public enum CardMusterTypes {
+    ARACHAS,
+    VAMPIRE,
+    GHOUL,
+    NEKKER,
+    WITCH_VELEN,
+    CERYS,
+    LIGHT_LONG_SHIP,
+    DWARVEN_SKIRMISHER,
+    ELVEN_SKIRMISHER,
+    HAVEKAR_SMUGGLER,
+    GAUNTER_ODIMM,
+    GAUNTER_ODIMM_DARKNESS;
+}

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="pane" prefHeight="1080.0" prefWidth="1920.0" styleClass="login-menu"
+      stylesheets="@../StyleSheets/Menus.css" xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller.ProfileViewController">
+    <AnchorPane prefHeight="1080.0" prefWidth="1920.0">
+        <ImageView fitHeight="1128.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Pics/BackGrounds/profileAlternative.png"/>
+            </image>
+        </ImageView>
+        <AnchorPane fx:id="movableAnchorPane" layoutX="643.0" layoutY="31.0" prefHeight="595.0" prefWidth="746.0"
+                    styleClass="alert-box">
+            <TabPane layoutX="69.0" layoutY="14.0" prefHeight="591.0" prefWidth="607.0" styleClass="alert-title"
+                     tabClosingPolicy="UNAVAILABLE">
+                <tabs>
+                    <Tab text="main">
+                        <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="174.0">
+                                <Label fx:id="friendUsername" alignment="TOP_LEFT" layoutX="28.0" layoutY="78.0"
+                                       prefHeight="13.0" prefWidth="551.0"
+                                       text="Username:                                              Nickname:                                            Emial: "
+                                       textFill="#c6c962">
+                                    <font>
+                                        <Font size="13.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="searchText" layoutX="28.0" layoutY="36.0" prefHeight="42.0"
+                                           prefWidth="400.0" promptText="name?">
+                                    <cursor>
+                                        <Cursor fx:constant="TEXT"/>
+                                    </cursor>
+                                </TextField>
+                                <Button layoutX="434.0" layoutY="36.0" mnemonicParsing="false" onAction="#search"
+                                        text="search"/>
+                                <Button layoutX="518.0" layoutY="36.0" mnemonicParsing="false" onAction="#send"
+                                        text="send"/>
+                                <Label layoutX="43.0" layoutY="-1.0" prefHeight="34.0" prefWidth="557.0"
+                                       text="search for players, or write their full names and send request"
+                                       textFill="#dbf234">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label alignment="TOP_LEFT" layoutX="50.0" layoutY="554.0" prefHeight="13.0"
+                                       prefWidth="551.0"
+                                       text="Username:                                                                      Nickname:                                                                       Emial: "
+                                       textFill="#c6c962">
+                                    <font>
+                                        <Font size="10.0"/>
+                                    </font>
+                                </Label>
+                                <ScrollPane layoutX="24.0" layoutY="106.0" prefHeight="442.0" prefWidth="538.0">
+                                    <content>
+                                        <ListView fx:id="usersListview" prefHeight="438.0" prefWidth="537.0"
+                                                  styleClass="list-view">
+                                            <!-- Add items to the ListView here -->
+                                        </ListView>
+                                    </content>
+                                </ScrollPane>
+                            </AnchorPane>
+                        </content>
+                    </Tab>
+                    <Tab text="history">
+                        <content>
+                            <AnchorPane fx:id="historyPane" minHeight="0.0" minWidth="0.0" prefHeight="563.0"
+                                        prefWidth="590.0">
+                                <children>
+                                    <ScrollPane layoutX="-1.0" layoutY="126.0" prefHeight="423.0" prefWidth="607.0">
+                                        <content>
+                                            <ListView fx:id="RequestsListView" prefHeight="463.0" prefWidth="608.0"
+                                                      styleClass="list-view">
+                                                <!-- Add items to the ListView here -->
+                                            </ListView>
+                                        </content>
+                                    </ScrollPane>
+                                    <Button layoutX="14.0" layoutY="58.0" mnemonicParsing="false" onAction="#refresh"
+                                            prefHeight="54.0" prefWidth="107.0" text="Refresh"/>
+                                    <TextField fx:id="friend" layoutX="153.0" layoutY="59.0" prefHeight="51.0"
+                                               prefWidth="240.0" promptText="whose request to interact??"/>
+                                    <Button layoutX="436.0" layoutY="58.0" mnemonicParsing="false" onAction="#reject"
+                                            prefHeight="53.0" prefWidth="79.0" text="reject" textFill="#e12b2b"/>
+                                    <Label layoutX="14.0" layoutY="1.0" prefHeight="50.0" prefWidth="553.0"
+                                           text="here you see history, and you check who has sent you a request and accept it, otherwise reject it"
+                                           textFill="#ccec12">
+                                        <font>
+                                            <Font size="11.0"/>
+                                        </font>
+                                    </Label>
+                                    <Button layoutX="513.0" layoutY="58.0" mnemonicParsing="false" onAction="#accept"
+                                            prefHeight="54.0" prefWidth="86.0" text="accept" textFill="#0f130f"/>
+                                </children>
+                            </AnchorPane>
+                        </content>
+                    </Tab>
+                </tabs>
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+            </TabPane>
+        </AnchorPane>
+    </AnchorPane>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="1080.0" layoutX="50.0" stroke="BLACK" strokeType="INSIDE"
+               width="400.0"/>
+    <Button layoutX="308.0" layoutY="100.0" onMouseClicked="#usernameChange" prefHeight="60.0" prefWidth="92.0"
+            text="change"/>
+    <Button layoutX="308.0" layoutY="200.0" onMouseClicked="#nicknameChange" prefHeight="60.0" prefWidth="92.0"
+            text="change"/>
+    <Button layoutX="308.0" layoutY="299.0" onMouseClicked="#emailChange" prefHeight="60.0" prefWidth="92.0"
+            text="change"/>
+    <Button layoutX="308.0" layoutY="398.0" onMouseClicked="#passwordChange" prefHeight="60.0" prefWidth="92.0"
+            text="change"/>
+    <TextField fx:id="username" layoutX="95.0" layoutY="109.0" promptText="new username"/>
+    <TextField fx:id="nickname" layoutX="95.0" layoutY="209.0" promptText="new nickname"/>
+    <TextField fx:id="email" layoutX="95.0" layoutY="308.0" promptText="new email"/>
+    <TextField fx:id="password" layoutX="95.0" layoutY="430.0" prefHeight="26.0" prefWidth="199.0"
+               promptText="new password"/>
+    <TextField fx:id="oldPassword" layoutX="95.0" layoutY="388.0" prefHeight="26.0" prefWidth="199.0"
+               promptText="old password"/>
+
+    <Button layoutX="106.0" layoutY="510.0" onMouseClicked="#showInfo" prefHeight="60.0" prefWidth="288.0"
+            text="show info"/>
+    <Button layoutX="138.0" layoutY="671.0" mnemonicParsing="false" onMouseClicked="#Back" prefHeight="42.0"
+            prefWidth="206.0" text="BACK"/>
+    <Button layoutX="256.0" layoutY="586.0" mnemonicParsing="false" onMouseClicked="#showHistory" prefHeight="60.0"
+            prefWidth="142.0" text="show history"/>
+    <TextField fx:id="numberOfGames" layoutX="99.0" layoutY="586.0" prefHeight="60.0" prefWidth="142.0"
+               promptText="how many games"/>
+</Pane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pane" prefHeight="1080" prefWidth="1920.0" styleClass="login-menu" stylesheets="@../StyleSheets/Menus.css"
+      xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="view.Controller.LeaderBoard">
+    <AnchorPane>
+        <HBox prefHeight="1080.0" prefWidth="2380.0">
+            <ImageView fitHeight="1163.0" fitWidth="1079.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../Pics/BackGrounds/rightLd.png"/>
+                </image>
+            </ImageView>
+            <ScrollPane prefHeight="340.0" prefWidth="226.0" styleClass="border-pane">
+                <content>
+                    <ListView fx:id="leaderboardListView" prefHeight="524.0" prefWidth="226.0" styleClass="list-view">
+                        <!-- Add items to the ListView here -->
+                    </ListView>
+                </content>
+            </ScrollPane>
+            <ImageView fitHeight="1080.0" fitWidth="1086.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../Pics/BackGrounds/leftLD.png"/>
+                </image>
+            </ImageView>
+        </HBox>
+        <VBox layoutX="1081.0" layoutY="524.0" prefHeight="72.0" prefWidth="210.0">
+            <ChoiceBox fx:id="choiceBox" prefHeight="23.0" prefWidth="226.0"/>
+        </VBox>
+        <VBox layoutX="1084.0" layoutY="635.0" prefHeight="170.0" prefWidth="210.0">
+            <Button onAction="#refresh" prefHeight="48.0" prefWidth="226.0" text="refresh"/>
+            <Button layoutX="10.0" layoutY="10.0" onAction="#back" prefHeight="48.0" prefWidth="226.0" text="back"/>
+        </VBox>
+    </AnchorPane>
+</Pane>

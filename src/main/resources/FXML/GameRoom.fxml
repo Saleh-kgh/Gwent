@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pane" prefHeight="1080.0" prefWidth="1920.0" styleClass="login-menu"
+      stylesheets="@../StyleSheets/Menus.css" xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller.GameRoomViewControl">
+    <AnchorPane prefHeight="1080.0" prefWidth="1920.0">
+        <ImageView fitHeight="1080" fitWidth="1920" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Pics/BackGrounds/mainMenuAlternative.png"/>
+            </image>
+        </ImageView>
+        <ScrollPane layoutX="370.0" layoutY="312.0" prefHeight="320.0" prefWidth="240.0" styleClass="border-pane">
+            <content>
+                <ListView fx:id="gameRooms" prefHeight="323.0" prefWidth="226.0" styleClass="list-view">
+                    <!-- Add items to the ListView here -->
+                </ListView>
+            </content>
+        </ScrollPane>
+        <Button fx:id="toggleButton" onMouseClicked="#toggle" layoutX="373.0" layoutY="269.0" prefHeight="18.0"
+                prefWidth="234.0"
+                styleClass="button" text="current Rooms"/>
+        <Button layoutX="377.0" layoutY="742.0" onAction="#back" prefHeight="48.0" prefWidth="226.0" text="back"/>
+        <Button onAction="#refresh" layoutX="373.0" layoutY="632.0" mnemonicParsing="false" prefHeight="42.0"
+                prefWidth="240.0"
+                text="Refresh"/>
+        <Button onAction="#goTo" layoutX="373.0" layoutY="689.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0"
+                text="go to room number:"/>
+        <TextField fx:id="number" layoutX="547.0" layoutY="689.0" prefHeight="42.0" prefWidth="69.0" promptText="num"/>
+    </AnchorPane>
+    <AnchorPane/>
+</Pane>

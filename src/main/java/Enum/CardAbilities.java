@@ -1,0 +1,15 @@
+package Enum;
+
+public enum CardAbilities {
+    UNIT_AGILE,
+    UNIT_BERSERKER,
+    UNIT_COMMANDERS_HORN,
+    UNIT_MARDROEME,
+    UNIT_MEDIC,
+    UNIT_MORALE_BOOST,
+    UNIT_MUSTER,
+    UNIT_SCORCH,
+    UNIT_SPY,
+    UNIT_TIGHT_BOND,
+    UNIT_TRNASFORMER;
+}
